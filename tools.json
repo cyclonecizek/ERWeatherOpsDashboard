@@ -233,11 +233,10 @@
       "category": "missions",
       "status": "operational",
       "owner": "",
-      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
+      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export.",
       "tags": [
         "KTTS",
         "NBM",
-        "OTV",
         "CSV export"
       ]
     },
