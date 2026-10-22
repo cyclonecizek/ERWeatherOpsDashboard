@@ -300,6 +300,17 @@
         "TAF",
         "verification"
       ]
+    },
+    {
+      "id": "exposure-forecast-tool",
+      "name": "Exposure Forecast Tool",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/exposure.html",
+      "icon": "",
+      "description": "Generates exposure forecasts",
+      "category": "products",
+      "status": "beta",
+      "owner": "cyclonecizek",
+      "tags": []
     }
   ]
 }
