@@ -1,0 +1,49 @@
+name: Add a tool
+description: Put a new tool on the Ops Hub. It goes live automatically about a minute after you submit.
+title: "[Hub] Add tool: "
+labels: ["hub-change"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      placeholder: https://yourname.github.io/YourTool/
+  - type: textarea
+    id: description
+    attributes:
+      label: What it does
+      description: One or two sentences so a new forecaster knows when to open it.
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: Must match a category already on the hub, e.g. Launch weather or Model guidance.
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options: [Beta, Operational, In development, Demo, Planned]
+      default: 0
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      placeholder: LC-39A, HREF, ensemble
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Leave blank to use the GitHub account in the link.
+  - type: input
+    id: icon
+    attributes:
+      label: Icon
+      placeholder: 🚀
