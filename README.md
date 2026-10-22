@@ -2,45 +2,60 @@
 
 One page that links every in-house weather tool built for Eastern Range operations, grouped by category, with tester feedback.
 
-Live site: `https://<your-github-user>.github.io/ER_Weather_Ops_Hub/`
+Live site: `https://cyclonecizek.github.io/ER_Weather_Ops_Hub/`
+
+## How adding a tool works
+
+Anyone with a GitHub account can add a tool, and nobody has to copy anything by hand:
+
+1. On the hub, click **Add a tool**, fill in the form and click **Continue on GitHub**.
+2. GitHub opens a pre-filled issue. Click **Submit new issue**.
+3. A GitHub Action checks the entry, adds it to `tools.json`, commits it and closes the issue with a ✅ comment.
+4. About a minute later the tool is on the hub for everyone. A hub left open picks up the change by itself.
+
+Editing or deleting a tool, or changing a category, works the same way from the pencil buttons on the hub.
+
+People can also skip the hub and use **Issues → New issue → Add a tool**.
+
+If something's wrong with a submission (bad link, unknown category, duplicate name), the Action leaves the issue open with a ⚠️ comment explaining what to fix. Editing the issue retries it.
+
+### Who can change what
+
+| Change | Who |
+|---|---|
+| Add a tool | Anyone with a GitHub account |
+| Edit or delete a tool | Repo collaborators, or whoever added that tool |
+| Edit, reorder or delete categories | Repo collaborators |
+
+To limit everything to collaborators, go to **Settings → Secrets and variables → Actions → Variables** and add `HUB_COLLABORATORS_ONLY` = `true`.
+
+Every change is a commit that names its issue, so anything can be undone from the repo history.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `index.html` | The hub page. You shouldn't need to touch it. |
-| `tools.json` | The list of categories and tools. **This is the file you edit.** |
-| `.nojekyll` | Tells GitHub Pages to serve the files as-is. |
+| `index.html` | The hub page |
+| `tools.json` | The categories and tools. The Action edits this; you can also edit it by hand. |
+| `.github/workflows/hub-from-issue.yml` | The Action that applies `[Hub]` issues |
+| `.github/scripts/apply_hub_issue.py` | Validation and editing logic the Action runs |
+| `.github/ISSUE_TEMPLATE/add-tool.yml` | The Add a tool issue form |
+| `.nojekyll` | Tells GitHub Pages to serve the files as-is |
 
-## Add a tool
+### Tool fields
 
-**Option A, from the hub:** click **Add a tool**, fill in the form and save. The hub shows the new `tools.json`; click **Copy**, then **Edit tools.json on GitHub**, paste over the contents and commit. If you don't have write access, GitHub opens a pull request for the owner to approve.
-
-**Option B, on GitHub:** open `tools.json`, click the pencil, and add an entry to `tools`:
-
-```json
-{
-  "id": "upper-winds",
-  "name": "Upper-Level Winds Board",
-  "icon": "🎯",
-  "url": "https://yourname.github.io/UpperWinds/",
-  "category": "launch",
-  "status": "beta",
-  "owner": "",
-  "description": "One or two sentences on what it does and when to use it.",
-  "tags": ["winds aloft", "GFS"]
-}
-```
-
-- `id`: short, unique, no spaces.
-- `category`: the `id` of an entry in `categories` (add a new category there if you need one).
 - `status`: `operational`, `beta`, `development`, `demo` or `planned`.
-- `owner`: leave blank to use the GitHub account in the `url` (`yourname.github.io/...` or `github.com/yourname/...`). Fill it in to override, e.g. for a tool hosted somewhere else.
-
-Changes go live about a minute after you commit. Reload the hub to see them.
+- `owner`: leave blank to use the GitHub account in the link (`yourname.github.io/...` or `github.com/yourname/...`).
+- `addedBy`: filled in by the Action with the GitHub user who added the tool.
 
 ## Feedback
 
-On GitHub Pages, **Post as GitHub issue** opens a pre-filled issue titled `[Feedback] <type>: <tool>`. Testers need a GitHub account that can see this repo. To get automatic labels, create `feedback`, `bug`, `idea`, `works` and `question` labels under **Issues → Labels** (labels are applied only for people with triage access; everyone else's issues are still findable by the `[Feedback]` title).
+**Post as GitHub issue** opens a pre-filled issue titled `[Feedback] <type>: <tool>`. These are left alone by the Action. Create `feedback`, `bug`, `idea`, `works` and `question` labels under **Issues → Labels** if you want them labeled (labels only apply for people with triage access).
 
-The hub figures out the repo from its own address. If you host it on a custom domain, set `"repo": "owner/ER_Weather_Ops_Hub"` (and `"branch"` if it isn't `main`) at the top of `tools.json`.
+## Setup checklist
+
+- **Settings → Pages:** Deploy from a branch, `main`, `/ (root)`.
+- **Settings → Actions → General → Workflow permissions:** if Action runs fail with a permission error on push or comment, choose **Read and write permissions**.
+- **Issues** must be turned on (Settings → General → Features).
+- If `main` has branch protection that blocks direct pushes, the Action can't commit.
+- On a custom domain, set `"repo": "owner/ER_Weather_Ops_Hub"` at the top of `tools.json`.
