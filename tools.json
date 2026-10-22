@@ -65,6 +65,23 @@
       ]
     },
     {
+      "id": "45ws-ops-dashboard",
+      "name": "WXR Situational Awareness Dashboard",
+      "icon": "🌩️",
+      "url": "https://hurricanehannah23.github.io/45wsdashboard/",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "Ops floor dashboard with Merlin lightning against warning rings, field mills, KSC and Cape wind and temperature towers with alerts, METARs and TAFs, the MLB discussion, tropics and the XMR sounding.",
+      "tags": [
+        "Merlin",
+        "lightning rings",
+        "wind towers",
+        "field mills",
+        "alerts"
+      ]
+    },
+    {
       "id": "tpw-loop",
       "name": "Southeast Moisture Loop",
       "icon": "💧",

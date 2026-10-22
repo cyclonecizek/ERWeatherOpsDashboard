@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" data-own>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-own>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" data-own>
-<script data-own>try{var t=localStorage.getItem("capehub-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<script data-own>var t=null;try{t=localStorage.getItem("capehub-theme");}catch(e){}document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");</script>
 <style data-own>
 :root{
   --bg:#EDF1F6; --panel:#FFFFFF; --panel-2:#F4F7FB; --line:#D3DCE8; --line-strong:#B7C4D6;
@@ -409,6 +409,17 @@ label.f small{font-weight:400;color:var(--muted)}
         "Eastern Range",
         "real-time"
       ]
+    },
+    {
+      "id": "45ws-ops-dashboard",
+      "name": "WXR Situational Awareness Dashboard",
+      "icon": "🌩️",
+      "url": "https://hurricanehannah23.github.io/45wsdashboard/",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "Ops floor dashboard with Merlin lightning against warning rings, field mills, KSC and Cape wind and temperature towers with alerts, METARs and TAFs, the MLB discussion, tropics and the XMR sounding.",
+      "tags": ["Merlin", "lightning rings", "wind towers", "field mills", "alerts"]
     },
     {
       "id": "tpw-loop",
