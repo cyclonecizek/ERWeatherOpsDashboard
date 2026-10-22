@@ -24,6 +24,12 @@
       "blurb": "Official products forecasters build and publish"
     },
     {
+      "id": "guidance",
+      "name": "Model guidance",
+      "color": "#D4A72C",
+      "blurb": "Post-processed model output for the Cape sites"
+    },
+    {
       "id": "missions",
       "name": "Mission support",
       "color": "#9B7BE8",
@@ -56,6 +62,86 @@
         "COP",
         "Eastern Range",
         "real-time"
+      ]
+    },
+    {
+      "id": "tpw-loop",
+      "name": "Southeast Moisture Loop",
+      "icon": "💧",
+      "url": "https://nluchetti1.github.io/TPWViewer/",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "Looping MIMIC total precipitable water with HRRR, GFS or ECMWF forecast tails, GOES-19 imagery, GLM lightning, point PW history and GIF export.",
+      "tags": [
+        "TPW",
+        "MIMIC",
+        "GOES-19",
+        "GLM"
+      ]
+    },
+    {
+      "id": "cloudscope-radar",
+      "name": "CloudScope Radar",
+      "icon": "📡",
+      "url": "https://nluchetti1.github.io/mrms_LLCC/",
+      "category": "launch",
+      "status": "beta",
+      "owner": "",
+      "description": "Live MRMS radar, lightning and field mills scored against the LLCC as if the flight path ran through every point, with cross-sections and pad readouts.",
+      "tags": [
+        "MRMS",
+        "LLCC",
+        "field mills",
+        "real-time"
+      ]
+    },
+    {
+      "id": "cloudscope-model",
+      "name": "CloudScope Model Outlook",
+      "icon": "☁️",
+      "url": "https://nluchetti1.github.io/cloud_type_classification/",
+      "category": "launch",
+      "status": "beta",
+      "owner": "",
+      "description": "Model-forecast cloud type and LLCC violation probability across the spaceport corridor, with simulated reflectivity, cross-sections and run-to-run trends.",
+      "tags": [
+        "cloud type",
+        "LLCC",
+        "cross-section"
+      ]
+    },
+    {
+      "id": "ecmwf-mos",
+      "name": "ECMWF MOS",
+      "icon": "📋",
+      "url": "https://nluchetti1.github.io/ecmwf-mos/",
+      "category": "guidance",
+      "status": "beta",
+      "owner": "",
+      "description": "MOS-style text guidance from the ECMWF IFS for KXMR, KTTS, KMLB and KCOF: temperature, dewpoint, wind, and precipitation and thunder probabilities.",
+      "tags": [
+        "ECMWF",
+        "MOS",
+        "KXMR",
+        "KTTS",
+        "KCOF"
+      ]
+    },
+    {
+      "id": "aviation-grid",
+      "name": "Aviation & Launch Commit Grid",
+      "icon": "📊",
+      "url": "https://nluchetti1.github.io/aviation_table_cape_canaveral/",
+      "category": "guidance",
+      "status": "beta",
+      "owner": "",
+      "description": "Hour-by-hour grid of aviation and launch variables (ceilings, shear, freezing levels, cloud tops) for Cape pads and airfields, plus HREF lightning, skew-Ts and IVT.",
+      "tags": [
+        "HREF",
+        "ceilings",
+        "freezing level",
+        "skew-T"
       ]
     },
     {
