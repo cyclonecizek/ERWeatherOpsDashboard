@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "title": "Eastern Range Weather Ops Hub",
+  "lede": "Custom in-house weather tools built for Eastern Range operations, gathered in one place for testing and feedback.",
+  "repo": "",
+  "branch": "main",
+  "categories": [
+    {
+      "id": "awareness",
+      "name": "Situational awareness",
+      "color": "#E06B8B",
+      "blurb": "The big picture across the range, right now"
+    },
+    {
+      "id": "launch",
+      "name": "Launch weather",
+      "color": "#E8743B",
+      "blurb": "Day-of-launch and launch-planning constraint boards"
+    },
+    {
+      "id": "products",
+      "name": "Forecast products",
+      "color": "#4FA3E0",
+      "blurb": "Official products forecasters build and publish"
+    },
+    {
+      "id": "missions",
+      "name": "Mission support",
+      "color": "#9B7BE8",
+      "blurb": "Operation-specific constraint boards"
+    },
+    {
+      "id": "outlooks",
+      "name": "Extended outlooks",
+      "color": "#2BB3A3",
+      "blurb": "Week 2 and beyond"
+    },
+    {
+      "id": "research",
+      "name": "Research and training",
+      "color": "#8DBF3F",
+      "blurb": "ML projects, competitions and teaching tools"
+    }
+  ],
+  "tools": [
+    {
+      "id": "er-cop",
+      "name": "Eastern Range Weather COP",
+      "icon": "🗺️",
+      "url": "https://cyclonecizek.github.io/ER_Weather_COP/",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "Common operating picture of current and forecast weather across the Eastern Range.",
+      "tags": [
+        "COP",
+        "Eastern Range",
+        "real-time"
+      ]
+    },
+    {
+      "id": "llcc",
+      "name": "LLCC Probability Board",
+      "icon": "⚡",
+      "url": "",
+      "category": "launch",
+      "status": "beta",
+      "owner": "",
+      "description": "Probability of violating each NASA-STD-4010B lightning launch commit criterion plus an overall probability, in 3-hour windows out 7 days with a custom window.",
+      "tags": [
+        "LLCC",
+        "LC-39A",
+        "SLC-40",
+        "probabilistic"
+      ]
+    },
+    {
+      "id": "weathernext",
+      "name": "WeatherNext Launch Board",
+      "icon": "🛰️",
+      "url": "",
+      "category": "launch",
+      "status": "development",
+      "owner": "",
+      "description": "Long-range launch planning for LC-39A, SLC-40 and SLC-41 from Google WeatherNext 3, deterministic and full-ensemble.",
+      "tags": [
+        "WeatherNext 3",
+        "ensemble",
+        "planning"
+      ]
+    },
+    {
+      "id": "slf",
+      "name": "7-Day Constraint Board (SLF page)",
+      "icon": "🛬",
+      "url": "",
+      "category": "launch",
+      "status": "operational",
+      "owner": "",
+      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
+      "tags": [
+        "KTTS",
+        "NBM",
+        "OTV",
+        "CSV export"
+      ]
+    },
+    {
+      "id": "planning",
+      "name": "Daily Planning Forecast",
+      "icon": "🗓️",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/",
+      "category": "products",
+      "status": "beta",
+      "owner": "",
+      "description": "Forecaster-editable zone planning forecast for KSC, Cape Canaveral SFS and Patrick SFB, published to CSV and Excel.",
+      "tags": [
+        "KSC",
+        "CCSFS",
+        "Patrick SFB",
+        "HREF",
+        "REFS"
+      ]
+    },
+    {
+      "id": "taf",
+      "name": "KCOF TAF Generator",
+      "icon": "✈️",
+      "url": "",
+      "category": "products",
+      "status": "development",
+      "owner": "",
+      "description": "Draft 30-hour Air Force TAF for Patrick SFB in AFMAN 15-129 format, for forecasters to refine before issuing.",
+      "tags": [
+        "KCOF",
+        "TAF",
+        "AFMAN 15-129"
+      ]
+    },
+    {
+      "id": "plume",
+      "name": "Plume Constraint",
+      "icon": "💨",
+      "url": "",
+      "category": "missions",
+      "status": "demo",
+      "owner": "",
+      "description": "Hourly 200 ft and onshore wind constraint outlook from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
+      "tags": [
+        "wind",
+        "hi-res",
+        "hourly"
+      ]
+    },
+    {
+      "id": "splashdown",
+      "name": "Splashdown Weather",
+      "icon": "🌊",
+      "url": "",
+      "category": "missions",
+      "status": "beta",
+      "owner": "",
+      "description": "Splashdown constraint board for recovery sites off the Southern California coast.",
+      "tags": [
+        "OCN",
+        "LOS",
+        "SAND",
+        "recovery"
+      ]
+    },
+    {
+      "id": "s2s",
+      "name": "Weeks 2–6 Outlook",
+      "icon": "🌡️",
+      "url": "",
+      "category": "outlooks",
+      "status": "planned",
+      "owner": "",
+      "description": "Sub-seasonal temperature and precipitation outlook maps for CONUS from GEFS and ECMWF with probabilistic bias correction.",
+      "tags": [
+        "S2S",
+        "GEFS",
+        "ECMWF",
+        "PBC"
+      ]
+    },
+    {
+      "id": "xmr",
+      "name": "XMR Sounding ML",
+      "icon": "🎈",
+      "url": "",
+      "category": "research",
+      "status": "development",
+      "owner": "",
+      "description": "Machine-learning thunderstorm prediction trained on about 30 years of wet-season Cape Canaveral soundings.",
+      "tags": [
+        "KXMR",
+        "74794",
+        "convection",
+        "ML"
+      ]
+    },
+    {
+      "id": "tfc",
+      "name": "Thor’s Forecast Challenge",
+      "icon": "🏆",
+      "url": "https://cyclonecizek.github.io/ThorsForecastChallenge/",
+      "category": "research",
+      "status": "beta",
+      "owner": "",
+      "description": "TAF-style forecast builder for any ICAO site with obs comparison, workbook output and autograding for TFC26.",
+      "tags": [
+        "TFC26",
+        "TAF",
+        "verification"
+      ]
+    }
+  ]
+}
