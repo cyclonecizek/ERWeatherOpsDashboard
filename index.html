@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" data-own>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-own>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" data-own>
+<script data-own>try{var t=localStorage.getItem("capehub-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <style data-own>
 :root{
   --bg:#EDF1F6; --panel:#FFFFFF; --panel-2:#F4F7FB; --line:#D3DCE8; --line-strong:#B7C4D6;
@@ -58,6 +59,9 @@ a{color:inherit}
 .clock{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-width:92px}
 .clock b{display:block;font:500 20px/1.15 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.02em}
 .clock span{font-size:12px;color:var(--muted)}
+.theme-btn{cursor:pointer;text-align:left;min-width:76px}
+.theme-btn:hover{border-color:var(--line-strong)}
+.theme-btn b{display:flex;align-items:center;height:23px}
 .stats{display:flex;gap:18px;margin-top:18px;color:var(--muted);font-size:14px;flex-wrap:wrap}
 .stats strong{color:var(--ink);font-weight:600}
 
@@ -212,6 +216,7 @@ label.f small{font-weight:400;color:var(--muted)}
       <div class="clock"><b id="cZ">--:--</b><span>Zulu</span></div>
       <div class="clock"><b id="cL">--:--</b><span>Cape local</span></div>
       <div class="clock"><b id="cJ">---</b><span>Julian day</span></div>
+      <button class="clock theme-btn" id="themeBtn" type="button"><b id="themeIcon"></b><span id="themeLabel">Theme</span></button>
     </div>
   </div>
 </header>
@@ -707,6 +712,30 @@ function tick(){
   $("cJ").textContent = String(Math.floor((now - start)/86400000)).padStart(3,"0");
 }
 tick(); setInterval(tick, 15000);
+
+// ---------- theme toggle ----------
+const SUN = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+const MOON = '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>';
+const darkMQ = matchMedia("(prefers-color-scheme: dark)");
+function currentTheme(){
+  const t = document.documentElement.getAttribute("data-theme");
+  return (t==="dark"||t==="light") ? t : (darkMQ.matches ? "dark" : "light");
+}
+function paintThemeBtn(){
+  const next = currentTheme()==="dark" ? "light" : "dark";
+  $("themeIcon").replaceChildren(svg(next==="dark" ? MOON : SUN, 20));
+  $("themeLabel").textContent = next==="dark" ? "Dark mode" : "Light mode";
+  $("themeBtn").setAttribute("aria-label", "Switch to " + next + " mode");
+}
+$("themeBtn").onclick = ()=>{
+  const next = currentTheme()==="dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  store.set("capehub-theme", next);
+  paintThemeBtn();
+};
+darkMQ.addEventListener("change", paintThemeBtn);
+new MutationObserver(paintThemeBtn).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+paintThemeBtn();
 
 // ---------- render ----------
 function matches(t){
