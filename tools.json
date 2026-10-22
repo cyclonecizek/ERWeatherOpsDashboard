@@ -165,7 +165,7 @@
       "id": "llcc",
       "name": "LLCC Probability Board",
       "icon": "⚡",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/LLCCForecastBoard/",
       "category": "launch",
       "status": "beta",
       "owner": "",
@@ -175,37 +175,6 @@
         "LC-39A",
         "SLC-40",
         "probabilistic"
-      ]
-    },
-    {
-      "id": "weathernext",
-      "name": "WeatherNext Launch Board",
-      "icon": "🛰️",
-      "url": "",
-      "category": "launch",
-      "status": "development",
-      "owner": "",
-      "description": "Long-range launch planning for LC-39A, SLC-40 and SLC-41 from Google WeatherNext 3, deterministic and full-ensemble.",
-      "tags": [
-        "WeatherNext 3",
-        "ensemble",
-        "planning"
-      ]
-    },
-    {
-      "id": "slf",
-      "name": "7-Day Constraint Board (SLF page)",
-      "icon": "🛬",
-      "url": "",
-      "category": "launch",
-      "status": "operational",
-      "owner": "",
-      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
-      "tags": [
-        "KTTS",
-        "NBM",
-        "OTV",
-        "CSV export"
       ]
     },
     {
@@ -241,14 +210,30 @@
       ]
     },
     {
+      "id": "slf",
+      "name": "7-Day Constraint Board (SLF page)",
+      "icon": "🛬",
+      "url": "https://cyclonecizek.github.io/SLFWeather/",
+      "category": "missions",
+      "status": "operational",
+      "owner": "",
+      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
+      "tags": [
+        "KTTS",
+        "NBM",
+        "OTV",
+        "CSV export"
+      ]
+    },
+    {
       "id": "plume",
-      "name": "Plume Constraint",
+      "name": "SLC-40/39A 200 ft Wind Constraints",
       "icon": "💨",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/OnshoreWindConstraint/",
       "category": "missions",
       "status": "demo",
       "owner": "",
-      "description": "Hourly 200 ft and onshore wind constraint outlook from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
+      "description": "Hourly 200 ft and onshore wind constraint outlook for SLC-40 and LC-39A from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
       "tags": [
         "wind",
         "hi-res",
@@ -259,7 +244,7 @@
       "id": "splashdown",
       "name": "Splashdown Weather",
       "icon": "🌊",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/SplashdownWeather/",
       "category": "missions",
       "status": "beta",
       "owner": "",
@@ -288,19 +273,51 @@
       ]
     },
     {
-      "id": "xmr",
-      "name": "XMR Sounding ML",
-      "icon": "🎈",
-      "url": "",
+      "id": "sounding-climo",
+      "name": "KXMR Sounding Climatology",
+      "icon": "📈",
+      "url": "https://cyclonecizek.github.io/CapeSoundingClimoDashboard/",
       "category": "research",
-      "status": "development",
+      "status": "beta",
       "owner": "",
-      "description": "Machine-learning thunderstorm prediction trained on about 30 years of wet-season Cape Canaveral soundings.",
+      "description": "Climatology of Cape Canaveral (KXMR) soundings for comparing today’s profile against what’s typical for the date.",
       "tags": [
         "KXMR",
         "74794",
-        "convection",
+        "climatology",
+        "soundings"
+      ]
+    },
+    {
+      "id": "xmr",
+      "name": "Cizek Lightning Random Forest Tool",
+      "icon": "🌲",
+      "url": "https://capelightningtool2026.streamlit.app/",
+      "category": "research",
+      "status": "beta",
+      "owner": "cyclonecizek",
+      "description": "Random forest lightning prediction for the Cape, trained on about 30 years of wet-season KXMR soundings.",
+      "tags": [
+        "KXMR",
+        "random forest",
+        "lightning",
         "ML"
+      ]
+    },
+    {
+      "id": "launch-replay",
+      "name": "GR2 Launch Weather Replay",
+      "icon": "⏪",
+      "url": "https://cyclonecizek.github.io/LaunchWeatherReplay/",
+      "category": "research",
+      "status": "beta",
+      "owner": "",
+      "description": "Builds downloadable GR2Analyst scenarios for past events: radar plus the tower, field mill and MERLIN placefiles for the date and time window you pick.",
+      "tags": [
+        "GR2Analyst",
+        "replay",
+        "case study",
+        "placefiles"
       ]
     },
     {
@@ -317,6 +334,98 @@
         "TAF",
         "verification"
       ]
+    }
+  ],
+  "placefiles": [
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "Surface observations",
+      "description": "Thermodynamic sensors up to 10 ft, wind sensors up to 20 ft AGL",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_surface.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "Lowest available observations",
+      "description": "Lowest thermodynamic and wind sensors at each tower",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_lowest.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft observations",
+      "description": "The exact 54 ft sensor level",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft winds, lowest thermodynamics",
+      "description": "54 ft winds with the lowest valid temperature, dew point and RH",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_lowest_thermo.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "200 ft and above",
+      "description": "Lowest wind sensor at or above 200 ft AGL",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_200plus.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft Barnes divergence/convergence",
+      "description": "Warm colors convergence, cool colors divergence",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_barnes_divergence.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "Surface observation loop",
+      "description": "One hour of surface observations",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_surface_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "Lowest available loop",
+      "description": "One hour using the lowest available sensors",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_lowest_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "54 ft loop",
+      "description": "One hour at the exact 54 ft level",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "200 ft and above loop",
+      "description": "One hour using the lowest sensor at or above 200 ft",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_200plus_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "54 ft Barnes divergence/convergence loop",
+      "description": "One hour of analyses, one per observation time",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_barnes_divergence_loop_1hr.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "Electric field mills",
+      "description": "Signed V/m; green < 500, yellow 500–999, red ≥ 1,000",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/ksc_fieldmills.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "MERLIN cloud-to-ground",
+      "description": "Gold crosses, 15-minute trail, loops with radar",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/merlin_cg.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "MERLIN cloud-to-cloud density",
+      "description": "About 1 km cells colored by CC count over 15 minutes",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/merlin_cc_density.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "915 MHz wind profilers",
+      "description": "Vertical wind profiles in hover text (ft, kt)",
+      "url": "https://cyclonecizek.github.io/ProfilerPlacefiles/ksc_915mhz_profilers.txt"
     }
   ]
 }

@@ -150,6 +150,21 @@ label.f small{font-weight:400;color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:14px;transition:.2s;z-index:50;max-width:calc(100vw - 32px);pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
+/* ---------- Placefiles ---------- */
+.pf-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:14px;align-items:start}
+.pf-group{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--pf);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.pf-ghead{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--panel-2);border-bottom:1px solid var(--line)}
+.pf-ghead h3{margin:0;font-size:15.5px;font-weight:600;flex:1}
+.pf-row{display:flex;gap:12px;align-items:center;padding:10px 14px}
+.pf-row+.pf-row{border-top:1px solid var(--line)}
+.pf-main{flex:1;min-width:0;display:grid;gap:1px}
+.pf-main b{font-weight:600;font-size:14.5px}
+.pf-desc{font-size:13px;color:var(--muted)}
+.pf-url{font:500 12px/1.5 "IBM Plex Mono",ui-monospace,monospace;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-copy{flex:none;min-width:92px;justify-content:center}
+.pf-foot{margin:12px 0 0;color:var(--muted);font-size:14px}
+.pf-foot a{color:var(--accent);font-weight:500}
+
 /* ---------- Feedback ---------- */
 .fb{margin-top:56px;scroll-margin-top:120px}
 .fb-grid{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:20px;align-items:start}
@@ -419,7 +434,13 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "Ops floor dashboard with Merlin lightning against warning rings, field mills, KSC and Cape wind and temperature towers with alerts, METARs and TAFs, the MLB discussion, tropics and the XMR sounding.",
-      "tags": ["Merlin", "lightning rings", "wind towers", "field mills", "alerts"]
+      "tags": [
+        "Merlin",
+        "lightning rings",
+        "wind towers",
+        "field mills",
+        "alerts"
+      ]
     },
     {
       "id": "tpw-loop",
@@ -430,7 +451,12 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "Looping MIMIC total precipitable water with HRRR, GFS or ECMWF forecast tails, GOES-19 imagery, GLM lightning, point PW history and GIF export.",
-      "tags": ["TPW", "MIMIC", "GOES-19", "GLM"]
+      "tags": [
+        "TPW",
+        "MIMIC",
+        "GOES-19",
+        "GLM"
+      ]
     },
     {
       "id": "cloudscope-radar",
@@ -441,7 +467,12 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "Live MRMS radar, lightning and field mills scored against the LLCC as if the flight path ran through every point, with cross-sections and pad readouts.",
-      "tags": ["MRMS", "LLCC", "field mills", "real-time"]
+      "tags": [
+        "MRMS",
+        "LLCC",
+        "field mills",
+        "real-time"
+      ]
     },
     {
       "id": "cloudscope-model",
@@ -452,7 +483,11 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "Model-forecast cloud type and LLCC violation probability across the spaceport corridor, with simulated reflectivity, cross-sections and run-to-run trends.",
-      "tags": ["cloud type", "LLCC", "cross-section"]
+      "tags": [
+        "cloud type",
+        "LLCC",
+        "cross-section"
+      ]
     },
     {
       "id": "ecmwf-mos",
@@ -463,7 +498,13 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "MOS-style text guidance from the ECMWF IFS for KXMR, KTTS, KMLB and KCOF: temperature, dewpoint, wind, and precipitation and thunder probabilities.",
-      "tags": ["ECMWF", "MOS", "KXMR", "KTTS", "KCOF"]
+      "tags": [
+        "ECMWF",
+        "MOS",
+        "KXMR",
+        "KTTS",
+        "KCOF"
+      ]
     },
     {
       "id": "aviation-grid",
@@ -474,13 +515,18 @@ label.f small{font-weight:400;color:var(--muted)}
       "status": "beta",
       "owner": "",
       "description": "Hour-by-hour grid of aviation and launch variables (ceilings, shear, freezing levels, cloud tops) for Cape pads and airfields, plus HREF lightning, skew-Ts and IVT.",
-      "tags": ["HREF", "ceilings", "freezing level", "skew-T"]
+      "tags": [
+        "HREF",
+        "ceilings",
+        "freezing level",
+        "skew-T"
+      ]
     },
     {
       "id": "llcc",
       "name": "LLCC Probability Board",
       "icon": "⚡",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/LLCCForecastBoard/",
       "category": "launch",
       "status": "beta",
       "owner": "",
@@ -490,37 +536,6 @@ label.f small{font-weight:400;color:var(--muted)}
         "LC-39A",
         "SLC-40",
         "probabilistic"
-      ]
-    },
-    {
-      "id": "weathernext",
-      "name": "WeatherNext Launch Board",
-      "icon": "🛰️",
-      "url": "",
-      "category": "launch",
-      "status": "development",
-      "owner": "",
-      "description": "Long-range launch planning for LC-39A, SLC-40 and SLC-41 from Google WeatherNext 3, deterministic and full-ensemble.",
-      "tags": [
-        "WeatherNext 3",
-        "ensemble",
-        "planning"
-      ]
-    },
-    {
-      "id": "slf",
-      "name": "7-Day Constraint Board (SLF page)",
-      "icon": "🛬",
-      "url": "",
-      "category": "launch",
-      "status": "operational",
-      "owner": "",
-      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
-      "tags": [
-        "KTTS",
-        "NBM",
-        "OTV",
-        "CSV export"
       ]
     },
     {
@@ -556,14 +571,30 @@ label.f small{font-weight:400;color:var(--muted)}
       ]
     },
     {
+      "id": "slf",
+      "name": "7-Day Constraint Board (SLF page)",
+      "icon": "🛬",
+      "url": "https://cyclonecizek.github.io/SLFWeather/",
+      "category": "missions",
+      "status": "operational",
+      "owner": "",
+      "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export into the OTV template.",
+      "tags": [
+        "KTTS",
+        "NBM",
+        "OTV",
+        "CSV export"
+      ]
+    },
+    {
       "id": "plume",
-      "name": "Plume Constraint",
+      "name": "SLC-40/39A 200 ft Wind Constraints",
       "icon": "💨",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/OnshoreWindConstraint/",
       "category": "missions",
       "status": "demo",
       "owner": "",
-      "description": "Hourly 200 ft and onshore wind constraint outlook from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
+      "description": "Hourly 200 ft and onshore wind constraint outlook for SLC-40 and LC-39A from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
       "tags": [
         "wind",
         "hi-res",
@@ -574,7 +605,7 @@ label.f small{font-weight:400;color:var(--muted)}
       "id": "splashdown",
       "name": "Splashdown Weather",
       "icon": "🌊",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/SplashdownWeather/",
       "category": "missions",
       "status": "beta",
       "owner": "",
@@ -603,19 +634,51 @@ label.f small{font-weight:400;color:var(--muted)}
       ]
     },
     {
-      "id": "xmr",
-      "name": "XMR Sounding ML",
-      "icon": "🎈",
-      "url": "",
+      "id": "sounding-climo",
+      "name": "KXMR Sounding Climatology",
+      "icon": "📈",
+      "url": "https://cyclonecizek.github.io/CapeSoundingClimoDashboard/",
       "category": "research",
-      "status": "development",
+      "status": "beta",
       "owner": "",
-      "description": "Machine-learning thunderstorm prediction trained on about 30 years of wet-season Cape Canaveral soundings.",
+      "description": "Climatology of Cape Canaveral (KXMR) soundings for comparing today’s profile against what’s typical for the date.",
       "tags": [
         "KXMR",
         "74794",
-        "convection",
+        "climatology",
+        "soundings"
+      ]
+    },
+    {
+      "id": "xmr",
+      "name": "Cizek Lightning Random Forest Tool",
+      "icon": "🌲",
+      "url": "https://capelightningtool2026.streamlit.app/",
+      "category": "research",
+      "status": "beta",
+      "owner": "cyclonecizek",
+      "description": "Random forest lightning prediction for the Cape, trained on about 30 years of wet-season KXMR soundings.",
+      "tags": [
+        "KXMR",
+        "random forest",
+        "lightning",
         "ML"
+      ]
+    },
+    {
+      "id": "launch-replay",
+      "name": "GR2 Launch Weather Replay",
+      "icon": "⏪",
+      "url": "https://cyclonecizek.github.io/LaunchWeatherReplay/",
+      "category": "research",
+      "status": "beta",
+      "owner": "",
+      "description": "Builds downloadable GR2Analyst scenarios for past events: radar plus the tower, field mill and MERLIN placefiles for the date and time window you pick.",
+      "tags": [
+        "GR2Analyst",
+        "replay",
+        "case study",
+        "placefiles"
       ]
     },
     {
@@ -632,6 +695,98 @@ label.f small{font-weight:400;color:var(--muted)}
         "TAF",
         "verification"
       ]
+    }
+  ],
+  "placefiles": [
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "Surface observations",
+      "description": "Thermodynamic sensors up to 10 ft, wind sensors up to 20 ft AGL",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_surface.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "Lowest available observations",
+      "description": "Lowest thermodynamic and wind sensors at each tower",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_lowest.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft observations",
+      "description": "The exact 54 ft sensor level",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft winds, lowest thermodynamics",
+      "description": "54 ft winds with the lowest valid temperature, dew point and RH",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_lowest_thermo.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "200 ft and above",
+      "description": "Lowest wind sensor at or above 200 ft AGL",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_200plus.txt"
+    },
+    {
+      "group": "Current WINDS and Barnes analysis",
+      "name": "54 ft Barnes divergence/convergence",
+      "description": "Warm colors convergence, cool colors divergence",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_barnes_divergence.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "Surface observation loop",
+      "description": "One hour of surface observations",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_surface_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "Lowest available loop",
+      "description": "One hour using the lowest available sensors",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_lowest_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "54 ft loop",
+      "description": "One hour at the exact 54 ft level",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "200 ft and above loop",
+      "description": "One hour using the lowest sensor at or above 200 ft",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_200plus_loop_1hr.txt"
+    },
+    {
+      "group": "One-hour loops (to match radar loops)",
+      "name": "54 ft Barnes divergence/convergence loop",
+      "description": "One hour of analyses, one per observation time",
+      "url": "https://cyclonecizek.github.io/WINDS_Placefile/ksc_winds_54ft_barnes_divergence_loop_1hr.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "Electric field mills",
+      "description": "Signed V/m; green < 500, yellow 500–999, red ≥ 1,000",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/ksc_fieldmills.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "MERLIN cloud-to-ground",
+      "description": "Gold crosses, 15-minute trail, loops with radar",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/merlin_cg.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "MERLIN cloud-to-cloud density",
+      "description": "About 1 km cells colored by CC count over 15 minutes",
+      "url": "https://cyclonecizek.github.io/EFM_GR2_Placefile/merlin_cc_density.txt"
+    },
+    {
+      "group": "Field mills, lightning and profilers",
+      "name": "915 MHz wind profilers",
+      "description": "Vertical wind profiles in hover text (ft, kt)",
+      "url": "https://cyclonecizek.github.io/ProfilerPlacefiles/ksc_915mhz_profilers.txt"
     }
   ]
 }
@@ -806,15 +961,18 @@ function render(){
   $("stats").replaceChildren(
     el("span",null, el("strong",null,String(data.tools.length)), " tools"),
     el("span",null, el("strong",null,String(data.categories.length)), " categories"),
-    el("span",null, el("strong",null,String(live)), " live or in beta"));
+    el("span",null, el("strong",null,String(live)), " live or in beta"),
+    placefiles().length ? el("span",null, el("strong",null,String(placefiles().length)), " GR placefiles") : null);
 
   // chips
   const counts = {}; data.tools.forEach(t=>counts[t.category]=(counts[t.category]||0)+1);
-  if (activeCat!=="all" && !catById(activeCat)) activeCat="all";
+  if (activeCat!=="all" && activeCat!==PF_ID && !catById(activeCat)) activeCat="all";
   $("chips").replaceChildren(
     el("button",{class:"chip","aria-pressed":String(activeCat==="all"),onclick:()=>{activeCat="all";render();}}, "All", el("span",{class:"n"},String(data.tools.length))),
     ...data.categories.map(c=>el("button",{class:"chip","aria-pressed":String(activeCat===c.id),onclick:()=>{activeCat=(activeCat===c.id?"all":c.id);render();}},
-      el("i",{style:"background:"+c.color}), c.name, el("span",{class:"n"},String(counts[c.id]||0)))));
+      el("i",{style:"background:"+c.color}), c.name, el("span",{class:"n"},String(counts[c.id]||0)))),
+    ...(placefiles().length ? [el("button",{class:"chip","aria-pressed":String(activeCat===PF_ID),onclick:()=>{activeCat=(activeCat===PF_ID?"all":PF_ID);render();}},
+      el("i",{style:"background:"+PF_COLOR}), "GR placefiles", el("span",{class:"n"},String(placefiles().length)))] : []));
 
   // sections
   const out = [];
@@ -830,7 +988,9 @@ function render(){
   }
   const orphans = visible.filter(t=>!catById(t.category));
   if (orphans.length && activeCat==="all") out.push(section("Uncategorized", "#8392A8", "", orphans));
-  if (!visible.length){
+  const pfSec = placefileSection();
+  if (pfSec) out.push(pfSec);
+  if (!visible.length && !pfSec){
     out.push(el("div",{class:"empty"},
       el("strong",null, data.tools.length ? "Nothing matches that search" : "No tools yet"),
       data.tools.length ? "Try a site, model or tag, or clear the filters." : "Add your first dashboard with the button above."));
@@ -844,6 +1004,43 @@ function togglePin(id){
   pins = pins.includes(id) ? pins.filter(p=>p!==id) : [...pins,id];
   store.set(LS_PINS, JSON.stringify(pins));
   render();
+}
+
+// ---------- GR placefiles ----------
+const PF_ID = "__placefiles", PF_COLOR = "#6E8BFF";
+function placefiles(){ return Array.isArray(data.placefiles) ? data.placefiles.filter(p=>p && safeUrl(p.url)) : []; }
+async function copyText(text, msg, btn){
+  let ok = false;
+  try{ await navigator.clipboard.writeText(text); ok = true; }
+  catch(e){
+    const ta = el("textarea",{style:"position:fixed;opacity:0;top:0;left:0"}); ta.value = text; document.body.append(ta); ta.select();
+    try{ ok = document.execCommand("copy"); }catch(_){} ta.remove();
+  }
+  toast(ok ? msg : "Couldn’t copy. Select the URL and copy it by hand.");
+  if (ok && btn){ const old = btn.textContent; btn.textContent = "Copied ✓"; setTimeout(()=>btn.textContent = old, 1500); }
+}
+function placefileSection(){
+  const pf = placefiles();
+  if (!pf.length || statusFilter!=="all" || (activeCat!=="all" && activeCat!==PF_ID)) return null;
+  const shown = pf.filter(p=>!query || query.split(/\s+/).every(w=>[p.group,p.name,p.description,p.url,"placefile placefiles gr gr2 gr2analyst"].join(" ").toLowerCase().includes(w)));
+  if (!shown.length) return null;
+  const groups = [...new Set(shown.map(p=>p.group || "Placefiles"))];
+  const replay = data.tools.find(t=>t.id==="launch-replay" && safeUrl(t.url));
+  return el("section",{class:"section",id:"placefiles",style:"--pf:"+PF_COLOR},
+    el("div",{class:"sec-head"},
+      el("h2",null, el("span",{class:"sw",style:"background:"+PF_COLOR}), "GR2Analyst placefiles"),
+      el("p",null,"In GR2Analyst, open Window → Placefile Manager, click +, paste a URL and turn the layer on. Each refreshes every 60 seconds."),
+      el("span",{class:"count"}, shown.length + " placefiles")),
+    el("div",{class:"pf-groups"}, groups.map(g=>{
+      const items = shown.filter(p=>(p.group || "Placefiles")===g);
+      return el("div",{class:"pf-group"},
+        el("div",{class:"pf-ghead"}, el("h3",null,g),
+          items.length>1 ? el("button",{class:"btn sm ghost",onclick:e=>copyText(items.map(i=>i.url).join("\n"), "Copied " + items.length + " URLs", e.currentTarget)},"Copy all") : null),
+        items.map(p=>el("div",{class:"pf-row"},
+          el("div",{class:"pf-main"}, el("b",null,p.name), p.description ? el("span",{class:"pf-desc"},p.description) : null, el("code",{class:"pf-url",title:p.url},p.url)),
+          el("button",{class:"btn sm pf-copy","aria-label":"Copy URL for "+p.name,onclick:e=>copyText(p.url, "Copied " + p.name + " URL", e.currentTarget)},"Copy URL"))));
+    })),
+    replay ? el("p",{class:"pf-foot"}, "Looking at a past event? ", el("a",{href:replay.url,target:"_blank",rel:"noopener noreferrer"}, replay.name), " builds a downloadable scenario with radar and these layers for any date and time window.") : null);
 }
 
 // ---------- saving ----------

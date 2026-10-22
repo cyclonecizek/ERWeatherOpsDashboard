@@ -48,6 +48,16 @@ Every change is a commit that names its issue, so anything can be undone from th
 - `owner`: leave blank to use the GitHub account in the link (`yourname.github.io/...` or `github.com/yourname/...`).
 - `addedBy`: filled in by the Action with the GitHub user who added the tool.
 
+## GR2Analyst placefiles
+
+The **GR2Analyst placefiles** section near the bottom of the hub lists each placefile URL with a **Copy URL** button (and **Copy all** per group). They live in the `placefiles` list in `tools.json`. To add one, edit `tools.json` on GitHub and add an entry:
+
+```json
+{ "group": "Field mills, lightning and profilers", "name": "New layer", "description": "Short note", "url": "https://.../layer.txt" }
+```
+
+Entries with the same `group` are shown together. Placefiles aren't part of the Add a tool form.
+
 ## Feedback
 
 **Post as GitHub issue** opens a pre-filled issue titled `[Feedback] <type>: <tool>`. These are left alone by the Action. Create `feedback`, `bug`, `idea`, `works` and `question` labels under **Issues → Labels** if you want them labeled (labels only apply for people with triage access).
