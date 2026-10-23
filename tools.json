@@ -214,7 +214,7 @@
       "id": "taf",
       "name": "KCOF TAF Generator",
       "icon": "✈️",
-      "url": "",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/taf.html",
       "category": "products",
       "status": "development",
       "owner": "",
@@ -333,21 +333,6 @@
         "replay",
         "case study",
         "placefiles"
-      ]
-    },
-    {
-      "id": "tfc",
-      "name": "Thor’s Forecast Challenge",
-      "icon": "🏆",
-      "url": "https://cyclonecizek.github.io/ThorsForecastChallenge/",
-      "category": "research",
-      "status": "beta",
-      "owner": "",
-      "description": "TAF-style forecast builder for any ICAO site with obs comparison, workbook output and autograding for TFC26.",
-      "tags": [
-        "TFC26",
-        "TAF",
-        "verification"
       ]
     }
   ],
