@@ -346,6 +346,20 @@
       "description": "Leverages an MRMS cloud classification algorithm and LLCC evaluation to generate violation statistics at every pad over the past 6 years.",
       "tags": [],
       "addedBy": "nluchetti1"
+    },
+    {
+      "id": "lmef-generator",
+      "name": "LMEF Generator",
+      "icon": "",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/lmef.html",
+      "category": "products",
+      "status": "beta",
+      "owner": "",
+      "description": "Builds the Launch Mission Execution Forecast",
+      "tags": [
+        "LMEF"
+      ],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
