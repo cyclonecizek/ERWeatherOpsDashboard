@@ -334,6 +334,18 @@
         "case study",
         "placefiles"
       ]
+    },
+    {
+      "id": "mrms-llcc-climatology",
+      "name": "MRMS LLCC Climatology",
+      "icon": "",
+      "url": "https://nluchetti1.github.io/mrms_LLCC_climo/",
+      "category": "research",
+      "status": "beta",
+      "owner": "",
+      "description": "Leverages an MRMS cloud classification algorithm and LLCC evaluation to generate violation statistics at every pad over the past 6 years.",
+      "tags": [],
+      "addedBy": "nluchetti1"
     }
   ],
   "placefiles": [
