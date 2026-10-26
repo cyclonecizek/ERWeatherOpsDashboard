@@ -360,6 +360,18 @@
         "LMEF"
       ],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "metcon",
+      "name": "METCON",
+      "icon": "",
+      "url": "https://hurricanehannah23.github.io/METCON_45WS/",
+      "category": "awareness",
+      "status": "development",
+      "owner": "",
+      "description": "Automatically pulls in data/tools needed to deliver METCON",
+      "tags": [],
+      "addedBy": "hurricanehannah23"
     }
   ],
   "placefiles": [
