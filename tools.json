@@ -430,6 +430,21 @@
         "trends"
       ],
       "addedBy": "Astromet"
+    },
+    {
+      "id": "meteograms",
+      "name": "Meteograms",
+      "icon": "",
+      "url": "https://astromet.github.io/ksc-meteograms",
+      "localPath": "",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "GFS, ECMWF, UKMET, and NAM meteograms all in one place",
+      "tags": [
+        "meteograms"
+      ],
+      "addedBy": "Astromet"
     }
   ],
   "placefiles": [
