@@ -19,8 +19,8 @@
     },
     {
       "id": "products",
-      "name": "Forecast products",
-      "color": "#4FA3E0",
+      "name": "Forecast Products",
+      "color": "#4fa3e0",
       "blurb": "Forecast products forecasters build and publish"
     },
     {
@@ -28,7 +28,7 @@
       "name": "Briefing Products",
       "color": "#36C2D0",
       "blurb": "Briefings for leadership and customers"
-    },    
+    },
     {
       "id": "guidance",
       "name": "Model guidance",
