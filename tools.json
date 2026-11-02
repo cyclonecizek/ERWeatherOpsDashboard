@@ -396,6 +396,24 @@
         "Fire Wx"
       ],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "nasa-ksc-morning-briefing-slides",
+      "name": "NASA/KSC Morning Briefing Slides",
+      "icon": "🌅",
+      "url": "https://astromet.github.io/ksc-brief-graphics/KSC_Morning_Brief.pptx",
+      "localPath": "",
+      "category": "briefing",
+      "status": "beta",
+      "owner": "",
+      "description": "Downloadable PowerPoint for the NASA/KSC morning briefing with 39 commonly referenced graphics filled in automatically. You still add the Today’s Tidbits bullets, the KSC observational data from WXR Forecaster and the RAOB sounding.",
+      "tags": [
+        "KSC",
+        "NASA",
+        "morning brief",
+        "PowerPoint"
+      ],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
