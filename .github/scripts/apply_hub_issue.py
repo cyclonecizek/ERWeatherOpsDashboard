@@ -70,7 +70,7 @@ def parse_body(text):
     status_label = fields.get("status", "Beta").lower()
     status = next((k for k, v in STATUSES.items() if v.lower() == status_label), "beta")
     return {"action": "add", "tool": {
-        "name": fields.get("tool name"), "url": fields.get("link", ""), "icon": fields.get("icon", ""),
+        "name": fields.get("tool name"), "url": fields.get("link", ""), "localPath": fields.get("local file path", ""), "icon": fields.get("icon", ""),
         "description": fields.get("what it does", ""), "category": fields.get("category", ""),
         "status": status, "owner": fields.get("owner", ""),
         "tags": [t.strip() for t in fields.get("tags", "").split(",") if t.strip()]}}
@@ -103,7 +103,10 @@ def clean_tool(raw, data, new_category=None):
     if not isinstance(tags, list):
         tags = [t.strip() for t in str(tags).split(",")]
     tags = [clean(t, 30, "Each tag") for t in tags if str(t).strip()][:8]
-    return {"name": name, "icon": clean(raw.get("icon"), 8, "Icon"), "url": url, "category": cat,
+    local = clean(raw.get("localPath"), 300, "Local file path")
+    if re.match(r"^\s*(javascript|data|vbscript):", local, re.I):
+        raise Reject("The local file path should look like \\\\server\\share\\Tool.html or C:\\Tools\\Tool.html.")
+    return {"name": name, "icon": clean(raw.get("icon"), 8, "Icon"), "url": url, "localPath": local, "category": cat,
             "status": status, "owner": clean(raw.get("owner"), 60, "Owner"),
             "description": clean(raw.get("description"), 400, "Description"), "tags": tags}
 
@@ -121,8 +124,23 @@ def clean_category(raw, data, existing_id=None):
     return {"name": name, "color": color, "blurb": clean(raw.get("blurb"), 120, "Category description")}
 
 
+def gh_owner(url):
+    m = re.match(r"^https?://([a-z0-9-]+)\.github\.io(/|$)", url or "", re.I)
+    if m:
+        return m.group(1)
+    m = re.match(r"^https?://(?:www\.)?github\.com/([^/?#]+)", url or "", re.I)
+    return m.group(1) if m else ""
+
+
 def can_change(tool):
-    return trusted or (author and tool.get("addedBy") == author)
+    """Collaborators, whoever added the tool, or the tool's owner (the GitHub account in its current link)."""
+    if trusted:
+        return True
+    if not author:
+        return False
+    who = author.lower()
+    owner = (tool.get("owner") or gh_owner(tool.get("url", ""))).strip().lower()
+    return (tool.get("addedBy") or "").lower() == who or owner == who
 
 
 def main():
@@ -154,7 +172,7 @@ def main():
         if not t:
             raise Reject("That tool isn't on the hub anymore.")
         if not can_change(t):
-            raise Reject(f"Only repo collaborators or the person who added **{t['name']}** can edit it.")
+            raise Reject(f"Only repo collaborators, the tool's owner or the person who added **{t['name']}** can edit it.")
         newcat = None
         if ch.get("newCategory"):
             newcat = clean_category(ch["newCategory"], data)
@@ -173,7 +191,7 @@ def main():
         if not t:
             raise Reject("That tool is already gone.")
         if not can_change(t):
-            raise Reject(f"Only repo collaborators or the person who added **{t['name']}** can delete it.")
+            raise Reject(f"Only repo collaborators, the tool's owner or the person who added **{t['name']}** can delete it.")
         data["tools"] = [x for x in tools if x["id"] != t["id"]]
         summary = f"Hub: remove {t['name']}"
         reply = f"✅ Removed **{t['name']}** from the hub."
