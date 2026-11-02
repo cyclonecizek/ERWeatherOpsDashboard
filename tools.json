@@ -379,6 +379,23 @@
       "description": "Automatically pulls in data/tools needed to deliver METCON",
       "tags": [],
       "addedBy": "hurricanehannah23"
+    },
+    {
+      "id": "burn-forecast",
+      "name": "Burn Forecast",
+      "icon": "",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/burn.html",
+      "localPath": "",
+      "category": "products",
+      "status": "beta",
+      "owner": "",
+      "description": "Generates controlled burn forecasts for both KSC and CCSFS.",
+      "tags": [
+        "Burn",
+        "Fire",
+        "Fire Wx"
+      ],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
