@@ -414,6 +414,22 @@
         "PowerPoint"
       ],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "mos-all-model-output-trends",
+      "name": "MOS All-Model Output & Trends",
+      "icon": "",
+      "url": "https://astromet.github.io/kmlb-model-guidance/",
+      "localPath": "",
+      "category": "guidance",
+      "status": "beta",
+      "owner": "",
+      "description": "Want to have MOS tabular data from major models at the ready? How about a graphical interpretation on how these data have changed since the last run? Well here it is.",
+      "tags": [
+        "MOS",
+        "trends"
+      ],
+      "addedBy": "Astromet"
     }
   ],
   "placefiles": [
