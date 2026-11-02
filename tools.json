@@ -49,9 +49,9 @@
     },
     {
       "id": "research",
-      "name": "Research and training",
-      "color": "#8DBF3F",
-      "blurb": "ML projects, competitions and teaching tools"
+      "name": "Climatology and Historical Data",
+      "color": "#8dbf3f",
+      "blurb": "Tailored climatology, historical data, archives, etc."
     }
   ],
   "tools": [
