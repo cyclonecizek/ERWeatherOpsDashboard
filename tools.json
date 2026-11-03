@@ -482,6 +482,19 @@
       "description": "Picks the day’s AMU sea breeze flow regime automatically and shows PWAT and Thompson Index against normal, with lightning probabilities from a Cape climatology broken out by regime, PWAT and Thompson Index.",
       "tags": [],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "refs-lpmm-heavy-precipitation-fo",
+      "name": "REFS LPMM Heavy Precipitation Forecast Dashboard",
+      "icon": "",
+      "url": "https://nluchetti1.github.io/refs-lpmm-cape/",
+      "localPath": "",
+      "category": "guidance",
+      "status": "beta",
+      "owner": "",
+      "description": "Pulls the LPMM (localized probability-matched mean) precipitation field from the REFS model and compares prior 3 runs to see if their is a dprog/dt signal for heavy precipitation events.  Also offers a \"look back\" at prior events to compare which models performed best vs. MRMS estimates.",
+      "tags": [],
+      "addedBy": "nluchetti1"
     }
   ],
   "placefiles": [
