@@ -52,6 +52,12 @@
       "name": "Climatology and Historical Data",
       "color": "#8dbf3f",
       "blurb": "Tailored climatology, historical data, archives, etc."
+    },
+    {
+      "name": "In-house Developed Forecast Tools",
+      "color": "#4fa3e0",
+      "blurb": "",
+      "id": "in-house-developed-forecast-tool"
     }
   ],
   "tools": [
@@ -312,10 +318,10 @@
     },
     {
       "id": "xmr",
-      "name": "Cizek Lightning Random Forest Tool",
+      "name": "Cizek Summer Lightning Random Forest Tool",
       "icon": "🌲",
       "url": "https://capelightningtool2026.streamlit.app/",
-      "category": "research",
+      "category": "in-house-developed-forecast-tool",
       "status": "beta",
       "owner": "cyclonecizek",
       "description": "Random forest lightning prediction for the Cape, trained on about 30 years of wet-season KXMR soundings.",
@@ -324,7 +330,8 @@
         "random forest",
         "lightning",
         "ML"
-      ]
+      ],
+      "localPath": ""
     },
     {
       "id": "launch-replay",
