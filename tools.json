@@ -462,6 +462,19 @@
         "KSC"
       ],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "cape-summer-flow-regime-dashboar",
+      "name": "Cape Summer Flow Regime Dashboard",
+      "icon": "🌊",
+      "url": "https://cyclonecizek.github.io/CapeSummerFlowRegimeDashboard/cape.html",
+      "localPath": "",
+      "category": "products",
+      "status": "beta",
+      "owner": "",
+      "description": "Picks the day’s AMU sea breeze flow regime automatically and shows PWAT and Thompson Index against normal, with lightning probabilities from a Cape climatology broken out by regime, PWAT and Thompson Index.",
+      "tags": [],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
