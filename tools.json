@@ -445,6 +445,23 @@
         "meteograms"
       ],
       "addedBy": "Astromet"
+    },
+    {
+      "id": "live-slf-crosswinds-headwinds-da",
+      "name": "Live SLF Crosswinds/Headwinds Dashboard",
+      "icon": "",
+      "url": "https://cyclonecizek.github.io/SLFCrosswindsDashboard/",
+      "localPath": "",
+      "category": "missions",
+      "status": "beta",
+      "owner": "",
+      "description": "Live headwind and crosswind at the SLF from towers 0511, 0512 and 0513 (or the latest KTTS ob), plus a 7-day probability of exceeding the headwind and crosswind limits you enter.",
+      "tags": [
+        "SLF",
+        "NASA",
+        "KSC"
+      ],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
