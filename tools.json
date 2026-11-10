@@ -495,6 +495,23 @@
       "description": "Pulls the LPMM (localized probability-matched mean) precipitation field from the REFS model and compares prior 3 runs to see if their is a dprog/dt signal for heavy precipitation events.  Also offers a \"look back\" at prior events to compare which models performed best vs. MRMS estimates.",
       "tags": [],
       "addedBy": "nluchetti1"
+    },
+    {
+      "id": "sounding-comparison",
+      "name": "Sounding Comparison",
+      "icon": "",
+      "url": "https://sting-jet-justin.github.io/skew-T/",
+      "localPath": "",
+      "category": "research",
+      "status": "beta",
+      "owner": "",
+      "description": "Grabs sounding data at a selected station for a number of user defined dates for a specified range of time. Then plots said data with convective and thermodynamic indices with side by side or overlaid skew-t diagrams.",
+      "tags": [
+        "soundings",
+        "KXMR",
+        "case study"
+      ],
+      "addedBy": "sting-jet-justin"
     }
   ],
   "placefiles": [
