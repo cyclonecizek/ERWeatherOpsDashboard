@@ -495,24 +495,6 @@
       "description": "Pulls the LPMM (localized probability-matched mean) precipitation field from the REFS model and compares prior 3 runs to see if their is a dprog/dt signal for heavy precipitation events.  Also offers a \"look back\" at prior events to compare which models performed best vs. MRMS estimates.",
       "tags": [],
       "addedBy": "nluchetti1"
-    },
-    {
-      "id": "space-coast-ocean-small-craft-da",
-      "name": "Space Coast Ocean & Small Craft Dashboard",
-      "icon": "",
-      "url": "https://jkim23403.github.io/wave-wind-heights/",
-      "localPath": "",
-      "category": "awareness",
-      "status": "development",
-      "owner": "",
-      "description": "Wave heights, Sea surface temperature, winds",
-      "tags": [
-        "Sea Surface Temp",
-        "Sea",
-        "Wave heights",
-        "winds"
-      ],
-      "addedBy": "jkim23403"
     }
   ],
   "placefiles": [
