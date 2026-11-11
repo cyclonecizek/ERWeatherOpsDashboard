@@ -512,6 +512,19 @@
         "case study"
       ],
       "addedBy": "sting-jet-justin"
+    },
+    {
+      "id": "space-coast-live-water-dashboard",
+      "name": "Space Coast Live Water Dashboard",
+      "icon": "",
+      "url": "https://jkim23403.github.io/space-coast-water-ops/",
+      "localPath": "",
+      "category": "awareness",
+      "status": "development",
+      "owner": "",
+      "description": "Sea Temperature, Wave Heights, winds, for Indian River, Banana River as well as Port Canaveral",
+      "tags": [],
+      "addedBy": "jkim23403"
     }
   ],
   "placefiles": [
