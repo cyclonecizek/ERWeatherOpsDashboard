@@ -525,6 +525,22 @@
       "description": "Sea Temperature, Wave Heights, winds, for Indian River, Banana River as well as Port Canaveral",
       "tags": [],
       "addedBy": "jkim23403"
+    },
+    {
+      "id": "45-ws-flood-dashboard",
+      "name": "45 WS Flood Dashboard",
+      "icon": "",
+      "url": "https://nluchetti1.github.io/refs-lpmm-cape/board.html",
+      "localPath": "",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "nluchetti1",
+      "description": "Monitors live updates from WPC ERO and NWS probabilistic precipitation output.",
+      "tags": [
+        "Precipitation",
+        "Probablistic Decision Support"
+      ],
+      "addedBy": "nluchetti1"
     }
   ],
   "placefiles": [
