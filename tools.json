@@ -264,19 +264,20 @@
     },
     {
       "id": "splashdown",
-      "name": "Splashdown Weather",
+      "name": "Dragon Splashdown Weather",
       "icon": "🌊",
-      "url": "https://cyclonecizek.github.io/SplashdownWeather/",
+      "url": "https://hurricanelena.github.io/dragon-support/",
       "category": "missions",
       "status": "beta",
       "owner": "",
-      "description": "Splashdown constraint board for recovery sites off the Southern California coast.",
+      "description": "Splashdown constraint board and briefing generator for Dragon recovery sites off the Southern California coast.",
       "tags": [
         "OCN",
         "LOS",
         "SAND",
         "recovery"
-      ]
+      ],
+      "localPath": ""
     },
     {
       "id": "sounding-climo",
