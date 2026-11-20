@@ -554,6 +554,22 @@
       "description": "Rainfall totals across the Space Coast using multiple sources of data, including MRMS estimates, LPLWS Rain Gauges, Airfields, CoCoRAHs, etc.",
       "tags": [],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "marine-route-forecast",
+      "name": "Marine Route Forecast",
+      "icon": "",
+      "url": "https://cyclonecizek.github.io/ERPlanningForecast/marine.html",
+      "localPath": "",
+      "category": "products",
+      "status": "beta",
+      "owner": "",
+      "description": "Generates a marine route forecast based on user defined waypoints.",
+      "tags": [
+        "Marine",
+        "Forecast"
+      ],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
