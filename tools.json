@@ -48,12 +48,6 @@
       "id": "in-house-developed-forecast-tool"
     },
     {
-      "id": "outlooks",
-      "name": "Extended outlooks",
-      "color": "#2BB3A3",
-      "blurb": "Week 2 and beyond"
-    },
-    {
       "id": "research",
       "name": "Climatology and Historical Data",
       "color": "#8dbf3f",
