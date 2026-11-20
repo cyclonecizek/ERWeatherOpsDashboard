@@ -541,6 +541,19 @@
         "Probablistic Decision Support"
       ],
       "addedBy": "nluchetti1"
+    },
+    {
+      "id": "space-coast-rainfall-dashboard",
+      "name": "Space Coast Rainfall Dashboard",
+      "icon": "",
+      "url": "https://cyclonecizek.github.io/SpaceCoast-Rainfall/",
+      "localPath": "",
+      "category": "awareness",
+      "status": "beta",
+      "owner": "",
+      "description": "Rainfall totals across the Space Coast using multiple sources of data, including MRMS estimates, LPLWS Rain Gauges, Airfields, CoCoRAHs, etc.",
+      "tags": [],
+      "addedBy": "cyclonecizek"
     }
   ],
   "placefiles": [
