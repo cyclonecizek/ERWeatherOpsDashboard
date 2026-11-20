@@ -285,22 +285,6 @@
       ]
     },
     {
-      "id": "s2s",
-      "name": "Weeks 2–6 Outlook",
-      "icon": "🌡️",
-      "url": "",
-      "category": "outlooks",
-      "status": "planned",
-      "owner": "",
-      "description": "Sub-seasonal temperature and precipitation outlook maps for CONUS from GEFS and ECMWF with probabilistic bias correction.",
-      "tags": [
-        "S2S",
-        "GEFS",
-        "ECMWF",
-        "PBC"
-      ]
-    },
-    {
       "id": "sounding-climo",
       "name": "KXMR Sounding Climatology",
       "icon": "📈",
