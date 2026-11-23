@@ -549,6 +549,19 @@
         "Forecast"
       ],
       "addedBy": "cyclonecizek"
+    },
+    {
+      "id": "bufkit-model-skew-t-emulator",
+      "name": "Bufkit model skew-T emulator",
+      "icon": "",
+      "url": "https://nluchetti1.github.io/space_coast_skewt_model_viewer/",
+      "localPath": "",
+      "category": "guidance",
+      "status": "beta",
+      "owner": "",
+      "description": "Emulates bufkit sounding program. Allows user to assess momentum transfer, hodographs, thickness-precip profiles, etc.",
+      "tags": [],
+      "addedBy": "nluchetti1"
     }
   ],
   "placefiles": [
