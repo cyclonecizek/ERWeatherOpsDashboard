@@ -59,7 +59,7 @@
       "id": "er-cop",
       "name": "Eastern Range Weather COP",
       "icon": "🗺️",
-      "url": "https://cyclonecizek.github.io/ER_Weather_COP/",
+      "url": "https://afspc.github.io/45ws-easternrange-weather-cop/",
       "category": "awareness",
       "status": "beta",
       "owner": "",
@@ -68,7 +68,8 @@
         "COP",
         "Eastern Range",
         "real-time"
-      ]
+      ],
+      "localPath": ""
     },
     {
       "id": "45ws-ops-dashboard",
