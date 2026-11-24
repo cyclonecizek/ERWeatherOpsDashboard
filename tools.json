@@ -254,14 +254,15 @@
       "icon": "💨",
       "url": "https://cyclonecizek.github.io/OnshoreWindConstraint/",
       "category": "missions",
-      "status": "demo",
+      "status": "beta",
       "owner": "",
       "description": "Hourly 200 ft and onshore wind constraint outlook for SLC-40 and LC-39A from every model in the pipeline, including HRRR, HREF, RRFS and REFS. Limits are demo values.",
       "tags": [
         "wind",
         "hi-res",
         "hourly"
-      ]
+      ],
+      "localPath": ""
     },
     {
       "id": "splashdown",
