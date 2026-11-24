@@ -238,14 +238,15 @@
       "icon": "🛬",
       "url": "https://cyclonecizek.github.io/SLFWeather/",
       "category": "missions",
-      "status": "operational",
+      "status": "beta",
       "owner": "",
       "description": "Multi-model probabilities for each 7-day constraint at KTTS (crosswinds, head and tailwinds, precip within 30 nm) with CSV export.",
       "tags": [
         "KTTS",
         "NBM",
         "CSV export"
-      ]
+      ],
+      "localPath": ""
     },
     {
       "id": "plume",
